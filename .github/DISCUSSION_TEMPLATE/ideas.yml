@@ -1,0 +1,26 @@
+title: "[RFC]: "
+labels: ["type: rfc"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to propose architectural ideas, design changes, or RFCs for the Certsmith ecosystem.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Proposal Summary
+      description: Provide an executive overview of the architectural concept or RFC.
+    validations:
+      required: true
+  - type: textarea
+    id: design
+    attributes:
+      label: Technical Specification & Design
+      description: Detailed architectural flow, cryptographic specifications, or API contracts.
+    validations:
+      required: true
+  - type: textarea
+    id: trade-offs
+    attributes:
+      label: Trade-offs & Security Impact
+      description: Discuss any trade-offs, operational complexity, or security implications.

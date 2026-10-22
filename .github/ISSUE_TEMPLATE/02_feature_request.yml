@@ -1,0 +1,49 @@
+name: Feature Request
+description: Propose a new capability, enhancement, or architectural extension for Certsmith
+title: "[Feature]: "
+labels: ["type: feature", "status: triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting an improvement to Certsmith. Please provide concrete technical context and use cases.
+  - type: dropdown
+    id: category
+    attributes:
+      label: Feature Category
+      description: What area of the platform does this proposal target?
+      options:
+        - "PKI Cryptographic Tiers & Algorithms"
+        - "ACME Protocol & Challenge Types (HTTP-01, DNS-01, TLS-ALPN-01)"
+        - "Trust Portal Frontend & Guides"
+        - "Container Appliance & Supervisor Runtime"
+        - "Key Ceremony & Offline Tooling"
+        - "Client Integration & Documentation"
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Problem Statement or Motivation
+      description: Explain the problem or limitation you are trying to solve.
+      placeholder: Currently, Certsmith does not support...
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Solution or Implementation
+      description: Detailed description of the proposed feature, configuration syntax, or architecture.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Describe any alternative approaches or workarounds evaluated.
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution Intent
+      options:
+        - label: I am interested in submitting a pull request to implement this feature.

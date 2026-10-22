@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: GitHub Discussions
+    url: https://github.com/orgs/certsmith/discussions
+    about: Ask questions, share configuration patterns, or discuss general architecture.
+  - name: Security Vulnerability Reporting
+    url: https://github.com/certsmith/.github/security/policy
+    about: Privately disclose sensitive security vulnerabilities.

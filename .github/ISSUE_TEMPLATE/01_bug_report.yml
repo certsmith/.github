@@ -1,0 +1,80 @@
+name: Bug Report
+description: Report a reproducible issue or defect in Certsmith
+title: "[Bug]: "
+labels: ["type: bug", "status: triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting an issue. Please verify that this problem has not already been reported in the issue tracker.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Affected Component or Tier
+      description: Select the specific component or PKI issuing tier experiencing the issue.
+      options:
+        - "Appliance Core (Docker / Debian runtime)"
+        - "Nginx Reverse Proxy & SSL Termination"
+        - "CR1 Tier (RSA 4096-bit, Port 9101)"
+        - "CR2 Tier (RSA 3072-bit, Port 9102)"
+        - "CR3 Tier (RSA 2048-bit, Port 9103)"
+        - "CE1 Tier (ECDSA P-384, Port 9201)"
+        - "CE2 Tier (ECDSA P-256, Port 9202)"
+        - "CE3 Tier (ECDSA P-521, Port 9203)"
+        - "Trust Portal Web Frontend (React Router SSG)"
+        - "Key Ceremony Script (certsmith-forge.sh)"
+        - "Issuance Validation (test-issuance.sh)"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Problem Description
+      description: A clear and concise description of the defect.
+      placeholder: Describe what happened...
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Exact steps to reproduce the behavior.
+      placeholder: |
+        1. Run command '...'
+        2. Execute ACME challenge with '...'
+        3. Observe error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should happen under correct operation.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs or Error Output
+      description: Please paste relevant logs from docker logs or terminal output. Redact private keys and credentials.
+      render: shell
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment Information
+      description: Relevant host OS, Docker engine version, and client details.
+      placeholder: |
+        - Host OS: Ubuntu 24.04 LTS / Debian 12 / macOS
+        - Docker Version: 27.x
+        - ACME Client: Certbot 2.x / Lego 4.x / Caddy 2.x
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Validation Checklist
+      options:
+        - label: I have verified this is not a duplicate of an existing issue.
+          required: true
+        - label: I have sanitized all logs to ensure no private keys or secrets are exposed.
+          required: true

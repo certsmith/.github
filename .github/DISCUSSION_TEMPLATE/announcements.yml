@@ -1,0 +1,21 @@
+title: "[Announcement]: "
+labels: ["type: announcement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Official announcements, release notices, and roadmap updates from the Certsmith maintainer team.
+  - type: textarea
+    id: overview
+    attributes:
+      label: Announcement Overview
+      description: Summary of release, policy update, or milestone.
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Detailed Information & Action Items
+      description: Complete details, upgrade steps, or migration notes.
+    validations:
+      required: true

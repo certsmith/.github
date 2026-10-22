@@ -1,0 +1,20 @@
+title: "[Question]: "
+labels: ["type: question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ask questions regarding Certsmith installation, ACME client integration, or certificate lifecycle management.
+  - type: textarea
+    id: question
+    attributes:
+      label: Question Details
+      description: What would you like help with?
+      placeholder: How do I configure Caddy to automatically trust Certsmith root CA?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Current Setup & Attempts
+      description: Describe what you have tried so far, including configuration snippets and error messages.
