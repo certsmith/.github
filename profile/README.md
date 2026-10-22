@@ -43,7 +43,6 @@ The core architecture strictly isolates offline root authority from operational 
 | :--- | :--- | :--- | :--- |
 | [certsmith/certsmith](https://github.com/certsmith/certsmith) | All-in-one private CA appliance, offline forge tools, and React Router Trust Portal | Public | Docker, step-ca, Nginx, React Router 8 |
 | [certsmith/.github](https://github.com/certsmith/.github) | Organization-wide community health files, issue forms, and governance policies | Public | GitHub Workflows, Issue Forms, Markdown |
-| [certsmith/.github-private](https://github.com/certsmith/.github-private) | Internal member onboarding, air-gapped key ceremony protocol, and maintenance runbooks | Private | Markdown (Members Only) |
 
 ---
 
